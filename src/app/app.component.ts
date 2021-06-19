@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 import pdfMake from "pdfmake/build/pdfmake";
 import pdfFonts from "pdfmake/build/vfs_fonts";
+import { TimeoutError } from 'rxjs';
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
 class Product{
@@ -35,10 +36,11 @@ export class AppComponent {
     let docDefinition = {
       content: [
         {
-          text: 'ELECTRONIC SHOP',
-          fontSize: 16,
+          text: 'Sanket India',
+          fontSize: 23,
+          bold: true,
           alignment: 'center',
-          color: '#047886'
+          color: '#02475E'
         },
         {
           text: 'INVOICE',
@@ -46,10 +48,11 @@ export class AppComponent {
           bold: true,
           alignment: 'center',
           decoration: 'underline',
-          color: 'skyblue'
+          color: '#444444'
         },
         {
           text: 'Customer Details',
+          color: "#444444",
           style: 'sectionHeader'
         },
         {
@@ -77,6 +80,7 @@ export class AppComponent {
         },
         {
           text: 'Order Details',
+          color: "#444444",
           style: 'sectionHeader'
         },
         {
@@ -92,6 +96,7 @@ export class AppComponent {
         },
         {
           text: 'Additional Details',
+          color: "#444444",
           style: 'sectionHeader'
         },
         {
@@ -106,6 +111,7 @@ export class AppComponent {
         },
         {
           text: 'Terms and Conditions',
+          color: "#444444",
           style: 'sectionHeader'
         },
         {
